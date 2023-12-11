@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  /* Custom CSS for sidebar width in mobile view */
+  @media (max-width: 767.98px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .items-container {
+        width: 100%;
+        order: 1;
+    }
+}
+.items-container{
+    margin-left: 0px;
+}
+.box {
+    color: black; /* Set the font color to black */
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Different background colors for each box */
+.box:nth-child(1) {
+    background-color: #ff9999; /* Light Red */
+}
+marquee {
+    color: red;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sidebar {
+    height: calc(100vh - 40px); /* Adjust the height as needed */
+    overflow-y: auto;
+}
+.bi-balloon-heart-fill{
+    color: red;
+}
