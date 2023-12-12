@@ -82,3 +82,9 @@ footer {
     margin-bottom: 5px;
     border-radius: 10px;
 }
+.nav-link.disabled {
+    color: #999; /* You can use a different color for disabled links */
+    pointer-events: none; /* Disable pointer events on the link */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    text-decoration: none; /* Remove underline or other decorations */
+}
