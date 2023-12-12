@@ -64,6 +64,26 @@
         margin-left: 0;
     }
 }
+@media (max-width : 330px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        transition: left 0.3s ease;
+        z-index: 1;
+        width: 230px;
+
+    }
+
+    #sidebar.active {
+        left: 0;
+        top: 135px;
+    }
+
+    .items-container {
+        margin-left: 0;
+    }
+}
 
 
 
