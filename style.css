@@ -3,32 +3,31 @@
     padding: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-  /* Custom CSS for sidebar width in mobile view */
-  @media (max-width: 767.98px) {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
+
+@media (max-width: 767.98px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -500px; 
+        transition: left 0.3s ease;
+        z-index: 1;
+        width: 230px;
+       
     }
 
-    #sidebar {
-        width: 100%;
-        order: 2;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 56px; /* Height of your navbar */
-        height: calc(100vh - 56px);
+    #sidebar.active {
+        left: 0;
+        top: 55px;
     }
-    
 
     .items-container {
-        width: 100%;
-        order: 1;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
+
 main {
-    overflow-y: auto; Make the main content scrollable
+    overflow-y: auto; 
 }
 .box {
     color: black; /* Set the font color to black */
