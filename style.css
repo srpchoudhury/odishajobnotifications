@@ -3,16 +3,15 @@
     padding: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 @media (max-width: 767.98px) {
     #sidebar {
         position: fixed;
         top: 0;
-        left: -500px; 
+        left: -500px;
         transition: left 0.3s ease;
         z-index: 1;
         width: 230px;
-       
+
     }
 
     #sidebar.active {
@@ -24,20 +23,41 @@
         margin-left: 0;
     }
 }
-@media (max-width : 400px) {
+
+@media (max-width : 390px) {
     #sidebar {
         position: fixed;
         top: 0;
-        left: -500px; 
+        left: -500px;
         transition: left 0.3s ease;
         z-index: 1;
         width: 230px;
-       
+
     }
 
     #sidebar.active {
         left: 0;
-        top: 95px;
+        top: 55px;
+    }
+
+    .items-container {
+        margin-left: 0;
+    }
+}
+@media (max-width : 380px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        transition: left 0.3s ease;
+        z-index: 1;
+        width: 230px;
+
+    }
+
+    #sidebar.active {
+        left: 0;
+        top: 85px;
     }
 
     .items-container {
