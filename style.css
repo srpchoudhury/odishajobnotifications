@@ -149,3 +149,18 @@ footer {
     cursor: not-allowed; /* Change cursor to not-allowed */
     text-decoration: none; /* Remove underline or other decorations */
 }
+ .notificationMore{
+        border: 1px solid rgb(224, 161, 150);
+        margin: 10px;
+       
+       
+    }
+    .firstBoundry{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+    .secondBoundary{
+        padding: 10px;
+    }
+
