@@ -94,6 +94,31 @@ function displayCards(data) {
     }
 }
 
+ function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+
+        // Convert to 12-hour format
+        hours = hours % 12;
+        hours = hours ? hours : 12; // If hours is 0, set it to 12
+
+        // Add leading zeros to minutes and seconds if needed
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        var formattedTime = hours + ":" + minutes + ":" + seconds + " " + ampm;
+        document.getElementById("liveTime").innerText = formattedTime;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+
+    // Call updateTime once to display the initial time
+    updateTime();
+
 // Event listener for search input
 document.getElementById('searchInput').addEventListener('input', function () {
     displayCards(getCardData());
