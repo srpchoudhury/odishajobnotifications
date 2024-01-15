@@ -124,13 +124,16 @@ document.getElementById('searchInput').addEventListener('input', function () {
     displayCards(getCardData());
 });
 //for index date in notifications
- document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
         // Get today's date
         var today = new Date();
-        
+
         // Format the date as "DD-MM-YYYY"
         var formattedDate = today.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
-        // Display the formatted date in the 'currentDate' paragraph
-        document.getElementById('currentDate').textContent = formattedDate;
+        // Display the formatted date in the 'currentDate' paragraphs
+        var currentDateElements = document.querySelectorAll('.currentDate');
+        currentDateElements.forEach(function (element) {
+            element.textContent = formattedDate;
+        });
     });
