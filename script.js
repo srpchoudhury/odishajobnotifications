@@ -137,3 +137,17 @@ document.getElementById('searchInput').addEventListener('input', function () {
             element.textContent = formattedDate;
         });
     });
+
+//for current date of post
+var detailLinks = document.querySelectorAll('.detailsLink');
+ detailLinks.forEach(function(link) {
+    
+     var currentDate = new Date();
+   
+     var formattedDate = currentDate.getDate().toString().padStart(2, '0') + '-' + (currentDate.getMonth() + 1).toString().padStart(2, '0') + '-' + currentDate.getFullYear();
+    
+     var currentDateElement = link.querySelector('.currentDate');
+     if (currentDateElement) {
+         currentDateElement.innerText =  "(Uploaded On) " +formattedDate;
+     }
+    });
