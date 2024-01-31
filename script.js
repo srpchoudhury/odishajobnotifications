@@ -137,4 +137,5 @@ document.getElementById('searchInput').addEventListener('input', function () {
             element.textContent = formattedDate;
         });
     });
+//thats all
 
